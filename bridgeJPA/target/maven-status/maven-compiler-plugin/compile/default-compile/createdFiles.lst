@@ -1,0 +1,6 @@
+com\etecnologic\bridge\dao\daoImpl\GenericDAO.class
+com\etecnologic\bridge\dao\interfaz\IUsersDAO.class
+com\etecnologic\bridge\model\Users.class
+com\etecnologic\bridge\service\interfaz\IUserServices.class
+com\etecnologic\bridge\dao\daoImpl\UsersDAO.class
+com\etecnologic\bridge\serviceimple\UsersServices.class
