@@ -1,8 +1,8 @@
 package com.etecnologic.bridge.service.interfaz;
 
-import com.etecnologic.bridge.model.Users;
+import com.etecnologic.bridge.model.User;
 
 public interface IUserServices {
 	public abstract int count();
-	public abstract Users userValid(String username,String password);
+	public abstract User userValid(String username,String password);
 }

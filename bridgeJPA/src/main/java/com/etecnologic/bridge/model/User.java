@@ -14,8 +14,8 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "Users")
-@NamedQuery(name="User.findAll", query="SELECT u FROM Users u")
-public class Users implements java.io.Serializable {
+@NamedQuery(name="User.findAll", query="SELECT u FROM User u")
+public class User implements java.io.Serializable {
 
 	/**
 	 * 
@@ -25,10 +25,10 @@ public class Users implements java.io.Serializable {
 	private String name;
 	private String password;
 
-	public Users() {
+	public User() {
 	}
 
-	public Users(String name, String password) {
+	public User(String name, String password) {
 		this.name = name;
 		this.password = password;
 	}

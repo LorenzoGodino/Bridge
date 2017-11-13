@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.etecnologic.bridge.dao.interfaz.IUsersDAO;
-import com.etecnologic.bridge.model.Users;
+import com.etecnologic.bridge.model.User;
 import com.etecnologic.bridge.service.interfaz.IUserServices;
 
 @Service("usuarioService")
@@ -27,7 +27,7 @@ public class UsersServices implements IUserServices {
 	}
 
 	@Override
-	public Users userValid(String username, String password) {
+	public User userValid(String username, String password) {
 		return userDAO.userValid(username, password);
 	} 
 }

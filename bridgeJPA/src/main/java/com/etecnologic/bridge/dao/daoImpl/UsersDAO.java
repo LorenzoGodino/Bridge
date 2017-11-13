@@ -12,11 +12,11 @@ import javax.persistence.criteria.Root;
 import org.springframework.stereotype.Repository;
 
 import com.etecnologic.bridge.dao.interfaz.IUsersDAO;
-import com.etecnologic.bridge.model.Users;
+import com.etecnologic.bridge.model.User;
 
 
 @Repository(value = "alumnoDAO")
-public class UsersDAO extends GenericDAO<Users> implements IUsersDAO,Serializable {
+public class UsersDAO extends GenericDAO<User> implements IUsersDAO,Serializable {
 	
 	/**
 	 * 
@@ -25,18 +25,18 @@ public class UsersDAO extends GenericDAO<Users> implements IUsersDAO,Serializabl
 	
 	@PersistenceContext
 	private EntityManager em;
-	public UsersDAO(Class<Users> entityClass) {
+	public UsersDAO(Class<User> entityClass) {
 		super(entityClass);
 	}
 
-	public Users userValid(String username,String password){
+	public User userValid(String username,String password){
 		CriteriaBuilder cb = em.getCriteriaBuilder();
-		CriteriaQuery<Users> q = cb.createQuery(Users.class);
-		Root<Users> userRoot = q.from(Users.class);
+		CriteriaQuery<User> q = cb.createQuery(User.class);
+		Root<User> userRoot = q.from(User.class);
 		q.select(userRoot);
 		q.where(cb.equal(userRoot.get("username"), username),
 				cb.equal(userRoot.get("password"), password));
-		List<Users> userlist=em.createQuery(q).getResultList();
+		List<User> userlist=em.createQuery(q).getResultList();
 		if (null!=userlist && userlist.size()>0){
 			return userlist.get(0);
 		}

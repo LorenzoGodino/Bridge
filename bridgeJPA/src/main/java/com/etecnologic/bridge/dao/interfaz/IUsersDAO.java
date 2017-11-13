@@ -1,8 +1,8 @@
 package com.etecnologic.bridge.dao.interfaz;
 
-import com.etecnologic.bridge.model.Users;
+import com.etecnologic.bridge.model.User;
 
 public interface IUsersDAO {
-	abstract Users userValid(String username,String password);
+	abstract User userValid(String username,String password);
 	abstract int count();
 }
