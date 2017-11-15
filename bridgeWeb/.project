@@ -51,6 +51,11 @@
 			</arguments>
 		</buildCommand>
 		<buildCommand>
+			<name>com.genuitec.eclipse.typescript.typeScriptBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
 			<name>org.eclipse.m2e.core.maven2Builder</name>
 			<arguments>
 			</arguments>
@@ -72,7 +77,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1510668987459</id>
+			<id>1510739077156</id>
 			<name></name>
 			<type>6</type>
 			<matcher>
