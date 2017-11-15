@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: bridgeWeb
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Lorenzo Godino
+Implementation-Vendor-Id: com.etecnologic
+Build-Jdk: 1.8.0_121
+Implementation-URL: http://projects.spring.io/spring-boot/spring-boot-
+ starter-parent/bridgeWeb/
+Created-By: Maven Integration for Eclipse
+
