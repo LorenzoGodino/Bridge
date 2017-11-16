@@ -24,7 +24,7 @@ export class AuthService {
     }
 
     login(user: User): Observable<boolean> {
-        return this.http.post(API_URL + '/login', user)
+        return this.http.post(API_URL + '/user/login', user)
             .map(response => response.json())
             .map((currentUser: User) => {
                 if (!user.isNull(currentUser)) {

@@ -2,7 +2,7 @@ export class User {
   id: string;
   email: string;
   password: string;
-  firstname: string;
+  name: string;
   lastname: string;
 
   contructor() {
@@ -11,7 +11,6 @@ export class User {
   public  isNull(user: User): boolean {
         return user.email === null &&
             user.password === null &&
-            user.firstname === null &&
-            user.lastname === null;
+            user.name === null;
     }
 }

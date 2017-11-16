@@ -5,7 +5,6 @@ import {CoreModule} from './core/core.module';
 import {AuthModule} from './auth/auth.module';
 import {HomeModule} from './core/components/home/home.module';
 import {routing} from './app.routing';
-
 import {AppComponent} from './app.component';
 
 @NgModule({
