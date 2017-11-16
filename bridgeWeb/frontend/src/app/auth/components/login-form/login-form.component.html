@@ -9,7 +9,17 @@
 			<input type="text" pInputText placeholder="Username">      
         </div>
         
-   
+        
+
+<input type="password" pPassword />
+            
+    <div class="ui-g-12 ui-md-4">
+        <div class="ui-inputgroup">
+            <button pButton type="button" icon="fa-check" class="ui-button-success"></button>    
+            <input type="text" pInputText placeholder="Vote">   
+            <button pButton type="button" icon="fa-close" class="ui-button-danger"></button>      
+        </div>
+    </div>
     <div>
         <label for="password">Password: </label>
         <input id="password" type="password" [(ngModel)]="model.password" #password="ngModel" name="password" pInputText>
