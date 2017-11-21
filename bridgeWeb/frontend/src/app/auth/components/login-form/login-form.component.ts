@@ -3,10 +3,9 @@ import {Router} from '@angular/router';
 import {Message} from 'primeng/components/common/api';
 import {AuthService} from '../../services/auth.service';
 import {User} from '../../../core/model/user';
-
 @Component({
     selector: 'app-login-form',
-    templateUrl: './login-form.component.html',
+    templateUrl: 'login-form.component.html',
 
 })
 export class LoginFormComponent implements OnInit {

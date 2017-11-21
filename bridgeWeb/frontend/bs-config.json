@@ -1,0 +1,8 @@
+{ "files": ["../src/main/webpp/**/*.{html,htm,css,js,ts}"],
+  "server": {
+    "baseDir": "../src/main/webapp",
+    "routes": {
+      "/node_modules": "node_modules"
+    }
+  }
+}

@@ -8,7 +8,7 @@ import {AuthComponent} from './components/auth/auth.component';
 import {LoginFormComponent} from './components/login-form/login-form.component';
 // import {RegisterFormComponent} from './components/register-form/register-form.component';
 
-
+import {InputTextModule} from 'primeng/primeng'
 import {TabViewModule} from 'primeng/components/tabview/tabview';
 import {ButtonModule} from 'primeng/components/button/button';
 
@@ -24,7 +24,8 @@ import {HttpModule} from '@angular/http';
         HttpModule,
         TabViewModule,
         ButtonModule,
-        GrowlModule
+        GrowlModule,
+        InputTextModule
     ],
     providers: [AuthService, AuthGuard],
     declarations: [AuthComponent, LoginFormComponent],

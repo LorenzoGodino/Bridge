@@ -3,10 +3,10 @@ import {AuthService} from '../../../auth/services/auth.service';
 import {Router} from '@angular/router';
 
 @Component({
-    templateUrl: './home.component.html'
+    templateUrl: 'home.component.html'
 })
+  
 export class HomeComponent {
-
     constructor(private router: Router,
                 private authService: AuthService) {
     }
