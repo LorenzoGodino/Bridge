@@ -1,8 +1,11 @@
-{ "files": ["../src/main/webpp/**/*.{html,htm,css,js,ts}"],
-  "server": {
-    "baseDir": "../src/main/webapp",
-    "routes": {
-      "/node_modules": "node_modules"
-    }
-  }
+{
+	"port": 8000,
+	"files":["./dist/**/*.{html,htm,css,js,ts}"
+	],
+	"server": {
+		"baseDir": "./dist",
+		"routes": {
+			"/node_modules": "node_modules"
+		}
+	}
 }
