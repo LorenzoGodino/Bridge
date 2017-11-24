@@ -5,6 +5,7 @@ import {AuthService} from '../../services/auth.service';
 import {User} from '../../../core/model/user';
 
 @Component({
+    moduleId: module.id,
     selector: 'app-login-form',
     templateUrl: 'login-form.component.html'
 })
