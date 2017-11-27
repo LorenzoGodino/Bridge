@@ -1,9 +1,9 @@
 {
 	"port": 8000,
-	"files":["./dist/**/*.{html,htm,css,js,ts}"
+	"files":["./src/**/*.{html,htm,css,js,ts}"
 	],
 	"server": {
-		"baseDir": "./dist",
+		"baseDir": "./src",
 		"routes": {
 			"/node_modules": "node_modules"
 		}
