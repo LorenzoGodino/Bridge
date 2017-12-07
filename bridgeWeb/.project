@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>bridgeWeb</name>
+	<name>bridgeService</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -77,17 +77,8 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1510924911124</id>
+			<id>0</id>
 			<name></name>
-			<type>22</type>
-			<matcher>
-				<id>org.eclipse.ui.ide.multiFilter</id>
-				<arguments>1.0-name-matches-false-false-node_modules</arguments>
-			</matcher>
-		</filter>
-		<filter>
-			<id>1510924883531</id>
-			<name>frontend/node_modules</name>
 			<type>22</type>
 			<matcher>
 				<id>org.eclipse.ui.ide.multiFilter</id>
