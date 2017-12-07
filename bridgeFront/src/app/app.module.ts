@@ -9,11 +9,11 @@ import { LoginComponent } from './component/login/login.component';
 @NgModule({
     declarations: [
         AppComponent,
-        AppRoutingModule,
-        LoginComponent
+      LoginComponent
+        
     ],
     imports: [
-        BrowserModule
+        BrowserModule,  AppRoutingModule
     ],
     providers: [],
     bootstrap: [AppComponent]
