@@ -1,6 +1,5 @@
 package com.etecnologic.bridge.dao.interfaz;
 
-
-public interface  UserRepositoryCustom {
+public interface  UserRepositoryCustom extends UserRepository {
 		
 }

@@ -22,7 +22,7 @@ public class UserRestController {
 	@GetMapping(value = "test")
 	public User  test() {
 		User user=new User();
-		user.setPassword("admin");
+		user.setUsername("admin");
 		user.setPassword("admin");
 		return userService.userValid(user.getUsername(), user.getPassword());
 	}
