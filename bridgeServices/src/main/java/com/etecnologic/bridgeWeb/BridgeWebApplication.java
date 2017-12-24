@@ -5,8 +5,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
-
-import com.etecnologic.bridge.dao.interfaz.UserRepository;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 
 @SpringBootApplication
 @ComponentScan ("com.etecnologic")
@@ -17,4 +16,6 @@ public class BridgeWebApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(BridgeWebApplication.class, args);
 	}
+
+
 }
