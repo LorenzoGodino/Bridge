@@ -1,0 +1,14 @@
+/deep/ body {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.img-login {
+  background: url("/assets/images/Xihoumen_Bridge.JPG") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: auto;
+  min-height: 100%;
+}
