@@ -3,8 +3,6 @@
   padding: 0 !important;
 }
 
-
-
 .img-cover {
   /* The image used */
   background-image: url("/assets/images/GoldenGateBridge-001.jpg");
@@ -12,6 +10,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.content{
+  height: 100%;
+  display: block;
+  position: absolute;
+  width: 100%;
 }
 
 .centralvertical {
