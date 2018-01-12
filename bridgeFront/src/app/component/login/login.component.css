@@ -3,17 +3,31 @@
   padding: 0 !important;
 }
 
+
+
 .img-cover {
-  background: url('/assets/images/Xihoumen_Bridge.JPG?v=3');
+  /* The image used */
+  background-image: url("/assets/images/GoldenGateBridge-001.jpg");
+  /* Center and scale the image nicely */
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  float: left;
-  height: 100%;
 }
 
-.loginform{
-  display: table;
+.centralvertical {
+  width: 300px;
+  display: block;
+  margin: auto;
+  vertical-align: middle;
+}
+
+
+
+.loginform {
   background-color: #eee;
+  vertical-align: middle;
+  min-height: 100%;
+  max-width: 100%;
 
 }
 
