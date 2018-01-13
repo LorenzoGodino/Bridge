@@ -20,13 +20,11 @@
   width: 100%;
 }
 
-.centralvertical {
-  vertical-align: middle;
-  min-height: 100%;
-  max-width: 100%;
+
+.container-center {
+  position: relative;
+  margin: 50% 19%;
 }
-
-
 
 .loginform {
 
