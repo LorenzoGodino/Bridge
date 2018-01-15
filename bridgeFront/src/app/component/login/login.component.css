@@ -78,6 +78,10 @@ input {
 }
 
 @media only screen and (max-width: 500px) {
+
+  .loginform{
+    width: 100%;
+  }
   .img-cover {
     display: none
   }
