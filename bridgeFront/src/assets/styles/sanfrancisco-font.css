@@ -2,7 +2,7 @@
   font-family:'SF Pro Display';
   font-style:normal;
   font-weight:300;
-  src:local('☺︎'), url("/fonts/sf-pro-display_light.woff2") format("woff2");
+  src:local('☺︎'), url("./fonts/sf-pro-display_light.woff2") format("woff2");
   /* (C) 2015 Apple Inc. All rights reserved.*/
 }
 
@@ -11,7 +11,7 @@ S
   font-family:'SF Pro Display';
   font-style:normal;
   font-weight:500;
-  src:local('☺︎'), url("/fonts/sf-pro-display_medium.woff2") format("woff2");
+  src:local('☺︎'), url("./fonts/sf-pro-display_medium.woff2") format("woff2");
   /* (C) 2015 Apple Inc. All rights reserved.*/
 }
 

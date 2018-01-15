@@ -6,7 +6,7 @@ import {InputTextModule} from 'primeng/primeng';
 import { AppComponent } from './component/main/app.component';
 import { LoginComponent } from './component/login/login.component';
 import {PasswordModule} from 'primeng/primeng';
-
+import {ButtonModule} from 'primeng/primeng';
 @NgModule({
     declarations: [
         AppComponent,
@@ -14,7 +14,7 @@ import {PasswordModule} from 'primeng/primeng';
 
     ],
     imports: [
-        BrowserModule,BrowserAnimationsModule, InputTextModule,AppRoutingModule,PasswordModule
+        BrowserModule,BrowserAnimationsModule, InputTextModule,AppRoutingModule,PasswordModule,ButtonModule
     ],
     providers: [],
     bootstrap: [AppComponent]
