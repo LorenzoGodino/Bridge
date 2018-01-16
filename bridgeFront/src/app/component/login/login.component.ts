@@ -4,7 +4,6 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {User} from '../../model/user';
 import {Message} from 'primeng/components/common/api';
 
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -12,24 +11,17 @@ import {Message} from 'primeng/components/common/api';
 })
 export class LoginComponent implements OnInit {
   msgs: Message[] = [];
-  message: string;
   userLogin: User;
 
   constructor(@Inject('IAuthService')
               private authService: IAuthService,
               private router: Router,
               private  activeRoute: ActivatedRoute) {
-
     this.msgs = [];
   }
 
-  addGrowlMessage(sev, sum, det) {
-    let message = {severity: sev, summary: sum, detail: det};
-    this.msgs.push(message);
-    setTimeout(() => {
-      this.msgs.splice(this.msgs.indexOf(message), 1);
-    }, 3000)
-  }
+
+
 
   onLogin(): void {
     if (this.userLogin && (this.userLogin.username == null || !this.userLogin.username)) {
