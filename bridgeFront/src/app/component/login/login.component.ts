@@ -33,8 +33,9 @@ export class LoginComponent implements OnInit {
         || this.userLogin.username === '')) {
       this.msgs.push({
         severity: 'error', summary: 'UserName is required',
-        detail: 'Validatation Failed' });
-        this.loginForm.controls['username'].markAsDirty({onlySelf: true});
+        detail: 'Validatation Failed'
+      });
+      this.loginForm.controls['username'].markAsDirty({onlySelf: true});
     }
     if (this.userLogin && (this.userLogin.password == null || this.userLogin.password === 'undefined' ||
         this.userLogin.password === '')) {

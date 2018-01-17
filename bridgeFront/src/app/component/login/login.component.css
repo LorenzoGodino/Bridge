@@ -48,24 +48,24 @@
   margin-left: 14%;
 }
 
-.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only{
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only {
   height: 36px;
   width: 84%;
 }
 
 .pielogin {
   padding-top: 5px;
-  border-top:1px solid #c0c0c0;
+  border-top: 1px solid #c0c0c0;
   text-align: center;
   color: #c0c0c0;
 
 }
-.lblTecnologia{
-  color:#32323380  !important
+
+.lblTecnologia {
+  color: #32323380 !important
 }
 
-
-.imgTecnologia{
+.imgTecnologia {
   width: 31%;
   margin-bottom: -7px;
   display: inline-block;
@@ -73,15 +73,22 @@
   margin-left: -1px;
 }
 
+.clserror {
+  margin-left: 13%;
+  margin-bottom: 4%;
+  margin-top: -2%;
+}
+
 input {
-  font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 @media only screen and (max-width: 500px) {
 
-  .loginform{
+  .loginform {
     width: 100%;
   }
+
   .img-cover {
     display: none
   }
@@ -96,20 +103,27 @@ input {
     font-size: 13px;
   }
 
-  .container-center{
+  .container-center {
     position: relative;
     margin: 9% 14%;
   }
 
-  .ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only{
+  .ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-only {
     height: 36px;
     width: 96%;
   }
 
-  .imgTecnologia{
+  .imgTecnologia {
     width: 31%;
     margin-bottom: -5px;
     display: inline-block;
     position: relative;
+  }
+
+  .clserror {
+    margin-left: -2%;
+    margin-bottom: 4%;
+    margin-top: -2%;
+    display: block;
   }
 }
