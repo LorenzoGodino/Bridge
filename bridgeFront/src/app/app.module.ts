@@ -1,5 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {FormControlName, FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
@@ -15,7 +15,8 @@ import {AuthService} from './services/impl/auth.service';
     AppComponent,
     LoginComponent
   ],
-  imports: [ FormsModule, HttpClientModule,
+  imports: [FormsModule,
+    ReactiveFormsModule, HttpClientModule,
     BrowserModule, BrowserAnimationsModule, InputTextModule,
     AppRoutingModule, PasswordModule, ButtonModule
     , GrowlModule],
@@ -24,3 +25,4 @@ import {AuthService} from './services/impl/auth.service';
 })
 export class AppModule {
 }
+
