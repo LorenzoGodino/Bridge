@@ -57,7 +57,7 @@ export class LoginComponent implements OnInit {
       if (this.statusMessage !== undefined) {
         this.msgs.push({severity: 'error', summary: this.statusMessage, detail: 'Validatation Failed'});
       }
-      if ((this.userbd && this.userbd !== undefined) && this.userbd.id !== undefined) {
+      if ((this.userbd && this.userbd !== undefined) && (this.userbd.id !== undefined &&  this.userbd.id !== null)) {
         this.msgs.push({severity: 'success', summary: this.userbd.username, detail: 'Succes'});
       } else {
         this.msgs.push({severity: 'error', summary: 'Incorrect PassWord', detail: 'Validatation Failed'});
