@@ -10,23 +10,26 @@ import {
   InputTextModule,
   MessageModule,
   MessagesModule,
-  PasswordModule
+  PasswordModule,
+  FieldsetModule
 } from 'primeng/primeng';
 import {AppComponent} from './component/main/app.component';
 import {LoginComponent} from './component/login/login.component';
 import {IAuthService} from './services/interfaces/IAuth.services';
 import {AuthService} from './services/impl/auth.service';
+import {NotfoundComponent} from './component/not-found/notfound.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    NotfoundComponent
   ],
   imports: [FormsModule,
     ReactiveFormsModule, HttpClientModule,
     BrowserModule, BrowserAnimationsModule, InputTextModule,
     AppRoutingModule, PasswordModule, ButtonModule
-    , GrowlModule, MessagesModule, MessageModule],
+    , GrowlModule, MessagesModule, MessageModule,FieldsetModule],
   providers: [HttpClientModule, {provide: 'IAuthService', useClass: AuthService}],
   bootstrap: [AppComponent]
 })
