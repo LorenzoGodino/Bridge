@@ -4,8 +4,9 @@
     <div class="ui-g-7 ui-xl-7 ui-md-7 ui-g-nopad img-cover">
     </div>
     <div class="ui-xl-5 ui-md-5 ui-sm-5 ui-g-nopad loginform">
-      <form (ngSubmit)="onLogin()" novalidated="true" [formGroup]="loginForm">
-        <div class="container-center">
+      <div class="container-center">
+        <form (ngSubmit)="onLogin()" novalidated="true" [formGroup]="loginForm">
+
           <div class="title">
             <img class="imglogo" src="/assets/images/logo.gif">
           </div>
@@ -22,11 +23,11 @@
             -->
           </div>
           <div class="grpUserName">
-          <div class="ui-inputgroup">
-            <span class="ui-inputgroup-addon"><i class="fa fa-unlock-alt "></i></span>
-            <input type="password" pInputText placeholder="PassWord" name="password" [(ngModel)]="userLogin.password"
-                   formControlName="password" />
-          </div>
+            <div class="ui-inputgroup">
+              <span class="ui-inputgroup-addon"><i class="fa fa-unlock-alt "></i></span>
+              <input type="password" pInputText placeholder="PassWord" name="password" [(ngModel)]="userLogin.password"
+                     formControlName="password"/>
+            </div>
             <!--
             <div *ngIf="!loginForm.controls['password'].valid && loginForm.controls['password'].dirty" class="clserror">
               <p-message severity="error" text="Field is required"></p-message>
@@ -36,14 +37,15 @@
           <div class="ui-inputgroup">
             <button pButton type="submit" label="Entrar"></button>
           </div>
+
+        </form>
+        <div class="pielogin">
+          <label class="lblTecnologia">Con la tecnología de<img class="imgTecnologia"
+                                                                src="/assets/images/logo.gif"></label>
+          <br/>
+          <br/>
+          2019 Copyright de Brigde CRM
         </div>
-      </form>
-      <div class="pielogin">
-        <label class="lblTecnologia">Con la tecnología de<img class="imgTecnologia"
-                                                              src="/assets/images/logo.gif"></label>
-        <br/>
-        <br/>
-        2019 Copyright de Brigde CRM
       </div>
     </div>
   </div>
