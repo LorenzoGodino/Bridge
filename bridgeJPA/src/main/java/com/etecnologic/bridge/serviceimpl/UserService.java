@@ -1,5 +1,6 @@
 package com.etecnologic.bridge.serviceimpl;
 
+import com.etecnologic.bridge.dao.interfaz.UserRepository;
 import com.etecnologic.bridge.dao.interfaz.UserRepositoryCustom;
 import com.etecnologic.bridge.model.User;
 import com.etecnologic.bridge.service.interfaz.IUserService;
@@ -10,10 +11,10 @@ import org.springframework.stereotype.Service;
 public class UserService implements IUserService {
 
     @Autowired
-    private UserRepositoryCustom userRepository;
+    private UserRepository userRepository;
 
 
-    public UserRepositoryCustom getUserRepository() {
+    public UserRepository getUserRepository() {
         return userRepository;
     }
 
