@@ -17,10 +17,10 @@ public class UserRestController {
     @Autowired
     private IUserService userService;
 
-    @CrossOrigin(origins ="http://localhost:4200")
+    @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping(value = "/login")
     public User userValid(@RequestBody User user) {
-        return userService.userValid(user.getUsername(), user.getPassword());
+       return   userService.userValid(user.getUsername(), user.getPassword());
     }
 
     @GetMapping(value = "test")

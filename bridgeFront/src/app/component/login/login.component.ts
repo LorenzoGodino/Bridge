@@ -4,6 +4,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {User} from '../../model/user';
 import {Message} from 'primeng/components/common/api';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -12,7 +13,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 export class LoginComponent implements OnInit {
   msgs: Message[] = [];
   private userLogin = new User();
-  private userbd = new User();
+  private userbd: User;
   loginForm: FormGroup;
   statusMessage: string;
 
@@ -26,6 +27,7 @@ export class LoginComponent implements OnInit {
       'password': ['', Validators.required]
     });
   }
+
   ngOnInit(): void {
     this.msgs = [];
   }
@@ -52,18 +54,17 @@ export class LoginComponent implements OnInit {
         resServiceLoginError => {
           this.statusMessage = resServiceLoginError;
         });
-      if (!this.statusMessage === undefined && this.statusMessage !== '') {
+      if (this.statusMessage !== undefined) {
         this.msgs.push({severity: 'error', summary: this.statusMessage, detail: 'Validatation Failed'});
       }
-      if (this.userbd === undefined) {
-        this.msgs.push({severity: 'error', summary: 'Incorrect PassWord', detail: 'Validatation Failed'});
-      } else {
+      if ((this.userbd && this.userbd !== undefined) && this.userbd.id !== undefined) {
         this.msgs.push({severity: 'success', summary: this.userbd.username, detail: 'Succes'});
+      } else {
+        this.msgs.push({severity: 'error', summary: 'Incorrect PassWord', detail: 'Validatation Failed'});
       }
     }
     this.msgs = JSON.parse(JSON.stringify(this.msgs));
   }
-
 
 
 }
