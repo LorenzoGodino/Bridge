@@ -6,12 +6,12 @@ import {AppRoutingModule} from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
 import {
   ButtonModule,
+  FieldsetModule,
   GrowlModule,
   InputTextModule,
   MessageModule,
   MessagesModule,
-  PasswordModule,
-  FieldsetModule
+  PasswordModule
 } from 'primeng/primeng';
 import {AppComponent} from './component/main/app.component';
 import {LoginComponent} from './component/login/login.component';
@@ -29,7 +29,7 @@ import {NotfoundComponent} from './component/not-found/notfound.component';
     ReactiveFormsModule, HttpClientModule,
     BrowserModule, BrowserAnimationsModule, InputTextModule,
     AppRoutingModule, PasswordModule, ButtonModule
-    , GrowlModule, MessagesModule, MessageModule,FieldsetModule],
+    , GrowlModule, MessagesModule, MessageModule, FieldsetModule],
   providers: [HttpClientModule, {provide: 'IAuthService', useClass: AuthService}],
   bootstrap: [AppComponent]
 })
