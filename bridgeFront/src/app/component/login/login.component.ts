@@ -13,9 +13,10 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 export class LoginComponent implements OnInit {
   msgs: Message[] = [];
   private userLogin = new User();
-  private userbd: User;
+  userbd: User;
   loginForm: FormGroup;
   statusMessage: string;
+
 
   constructor(@Inject('IAuthService')
               private authService: IAuthService,
@@ -29,18 +30,30 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.msgs = [];
   }
 
-  onLogin(): void {
-    if (!this.loginForm.valid) {
+  onLogin() {
+    this.msgs = [];
+    if (this.loginForm.valid) {
+      this.authService.login(this.userLogin)
+      .subscribe(data => {
+          this.userbd = data;
+          this.msgs.push({severity: 'success', summary: this.userbd.username, detail: 'Succes'});
+        },
+        resServiceLoginError => {
+          this.statusMessage = resServiceLoginError;
+          if (this.statusMessage !== undefined && this.statusMessage.includes('404 OK')) {
+            this.msgs.push({severity: 'error', summary: 'Incorrect PassWord', detail: 'Validatation Failed'});
+          } else {
+            this.msgs.push({severity: 'error', summary: this.statusMessage, detail: 'Error Server'});
+          }
+        });
+      this.msgs = JSON.parse(JSON.stringify(this.msgs));
+    } else {
       if (this.userLogin && (this.userLogin.username == null
           || this.userLogin.username === 'undefined'
           || this.userLogin.username === '')) {
-        this.msgs.push({
-          severity: 'error', summary: 'UserName is required',
-          detail: 'Validatation Failed'
-        });
+        this.msgs.push({severity: 'error', summary: 'UserName is required', detail: 'Validatation Failed'});
         this.loginForm.controls['username'].markAsDirty({onlySelf: true});
       }
       if (this.userLogin && (this.userLogin.password == null || this.userLogin.password === 'undefined' ||
@@ -48,23 +61,7 @@ export class LoginComponent implements OnInit {
         this.msgs.push({severity: 'error', summary: 'PassWord is required', detail: 'Validatation Failed'});
         this.loginForm.controls['password'].markAsDirty({onlySelf: true});
       }
-    } else {
-      // En este punto vamos a controlar si el password existe en la bbdd
-      this.authService.login(this.userLogin).subscribe(data => this.userbd = data,
-        resServiceLoginError => {
-          this.statusMessage = resServiceLoginError;
-        });
-      if (this.statusMessage !== undefined) {
-        this.msgs.push({severity: 'error', summary: this.statusMessage, detail: 'Validatation Failed'});
-      }
-      if ((this.userbd && this.userbd !== undefined) && (this.userbd.id !== undefined &&  this.userbd.id !== null)) {
-        this.msgs.push({severity: 'success', summary: this.userbd.username, detail: 'Succes'});
-      } else {
-        this.msgs.push({severity: 'error', summary: 'Incorrect PassWord', detail: 'Validatation Failed'});
-      }
     }
-    this.msgs = JSON.parse(JSON.stringify(this.msgs));
   }
-
 
 }

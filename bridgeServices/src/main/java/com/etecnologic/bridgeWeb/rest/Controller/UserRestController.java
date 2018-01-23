@@ -3,6 +3,8 @@ package com.etecnologic.bridgeWeb.rest.Controller;
 import com.etecnologic.bridge.model.User;
 import com.etecnologic.bridge.service.interfaz.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,8 +21,13 @@ public class UserRestController {
 
     @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping(value = "/login")
-    public User userValid(@RequestBody User user) {
-       return   userService.userValid(user.getUsername(), user.getPassword());
+    public ResponseEntity<User> userValid(@RequestBody User user) {
+        User returnUser = userService.userValid(user.getUsername(), user.getPassword());
+        if (returnUser == null) {
+            return new ResponseEntity<> ( HttpStatus.NOT_FOUND);
+        } else {
+            return new ResponseEntity<>(returnUser, HttpStatus.OK);
+        }
     }
 
     @GetMapping(value = "test")

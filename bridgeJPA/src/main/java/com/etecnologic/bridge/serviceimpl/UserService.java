@@ -25,12 +25,7 @@ public class UserService implements IUserService {
 
 
     public User userValid(String username, String password) {
-        User userFind = userRepository.findByUsernameAndPassword(username, password);
-        if (userFind == null) {
-            return new User();
-        } else {
-            return userFind;
-        }
+        return userRepository.findByUsernameAndPassword(username, password);
     }
 
 

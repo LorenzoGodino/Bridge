@@ -11,6 +11,7 @@ import {IAuthService} from '../interfaces/IAuth.services';
 export class AuthService implements IAuthService {
   baseurl: String;
   private headers = new HttpHeaders({'Accept': 'application/json'});
+
   constructor(private http: HttpClient) {
     this.baseurl = environment.base_url;
   }
@@ -27,7 +28,8 @@ export class AuthService implements IAuthService {
   }
 
   login(user): Observable<User> {
-    return  this.http.post (this.baseurl + '/api/user/login', user, {headers: this.headers}).catch
-    (this.handleError);
+    return this.http.post(this.baseurl + '/api/user/login', user, {headers: this.headers})
+  .catch(this.handleError);
+
   }
 }
