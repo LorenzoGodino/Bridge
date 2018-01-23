@@ -30,10 +30,10 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.msgs = [];
   }
 
   onLogin() {
-    this.msgs = [];
     if (this.loginForm.valid) {
       this.authService.login(this.userLogin)
       .subscribe(data => {
