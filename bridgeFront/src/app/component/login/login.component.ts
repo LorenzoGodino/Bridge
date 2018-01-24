@@ -17,7 +17,6 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   statusMessage: string;
 
-
   constructor(@Inject('IAuthService')
               private authService: IAuthService,
               private router: Router,
@@ -42,10 +41,10 @@ export class LoginComponent implements OnInit {
         },
         resServiceLoginError => {
           this.statusMessage = resServiceLoginError;
-          if (this.statusMessage !== undefined && this.statusMessage.includes('404 OK')) {
-            this.msgs.push({severity: 'error', summary: 'Incorrect PassWord', detail: 'Validatation Failed'});
+          if (this.statusMessage === 'User not found') {
+            this.msgs.push({severity: 'warn', summary: this.statusMessage, detail: 'Info'});
           } else {
-            this.msgs.push({severity: 'error', summary: this.statusMessage, detail: 'Error Server'});
+            this.msgs.push({severity: 'error', summary: this.statusMessage, detail: 'Server Error'});
           }
         });
       this.msgs = JSON.parse(JSON.stringify(this.msgs));

@@ -17,8 +17,13 @@ export class AuthService implements IAuthService {
   }
 
   handleError(error: any) {
-    const errorMessage = (error.message) ? error.message :
-      error.status ? `${error.status} - ${error.statusText}` : `Server error`;
+    let errorMessage: string;
+    if (error.error.message !== undefined) {
+      errorMessage = error.error.message;
+    } else {
+      errorMessage = (error.message) ? error.message :
+        error.status ? `${error.status} - ${error.statusText}` : `Server error`;
+    }
     return Observable.throw(errorMessage);
   }
 
@@ -29,7 +34,7 @@ export class AuthService implements IAuthService {
 
   login(user): Observable<User> {
     return this.http.post(this.baseurl + '/api/user/login', user, {headers: this.headers})
-  .catch(this.handleError);
+    .catch(this.handleError);
 
   }
 }
