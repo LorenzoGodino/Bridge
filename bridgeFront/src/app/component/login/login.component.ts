@@ -1,5 +1,5 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {IAuthService} from '../../services/interfaces/IAuth.services';
+import {IAuthService} from '../../services/interfaces/iauth.services';
 import {ActivatedRoute, Router} from '@angular/router';
 import {User} from '../../model/user';
 import {Message} from 'primeng/components/common/api';
@@ -37,6 +37,8 @@ export class LoginComponent implements OnInit {
       this.authService.login(this.userLogin)
       .subscribe(data => {
           this.userbd = data;
+          localStorage.setItem('currentUser', JSON.stringify(this.userbd));
+          this.router.navigate(['/board']);
           this.msgs.push({severity: 'success', summary: this.userbd.username, detail: 'Succes'});
         },
         resServiceLoginError => {

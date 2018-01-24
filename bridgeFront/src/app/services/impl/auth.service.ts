@@ -5,7 +5,7 @@ import {environment} from '../../../environments/environment';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 import {User} from '../../model/user';
-import {IAuthService} from '../interfaces/IAuth.services';
+import {IAuthService} from '../interfaces/iauth.services';
 
 @Injectable()
 export class AuthService implements IAuthService {
