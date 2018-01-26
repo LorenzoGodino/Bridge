@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
       .subscribe(data => {
           this.userbd = data;
           localStorage.setItem('currentUser', JSON.stringify(this.userbd));
-          this.router.navigate(['/board']);
+          this.router.navigate(['/home']);
           this.msgs.push({severity: 'success', summary: this.userbd.username, detail: 'Succes'});
         },
         resServiceLoginError => {
