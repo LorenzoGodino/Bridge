@@ -1,20 +1,16 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {UserListComponent} from './list/listuser/userList.component';
-import {HomeComponent} from "../home/home.component";
-import {NotfoundComponent} from "../not-found/notfound.component";
+import {NotfoundComponent} from '../not-found/notfound.component';
+import {UserComponent} from './user.component';
+import {UserListComponent} from './list/user-list/userList.component';
 
 
 const routes: Routes = [
   {
-    path: 'home',
-    component: HomeComponent,
+    path: 'userList',
+    component: UserComponent,
     children: [
-      {
-        path: 'user',
-        component: UserListComponent,
-        outlet: 'routerhome'
-      }
+      {path: '', component: UserListComponent ,    outlet : 'bookPopup', },
     ]
   },
   {path: '**', component: NotfoundComponent}

@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {MenuItem} from "primeng/primeng";
 
 @Component({
   selector: 'app-board',
@@ -6,8 +7,20 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  items: MenuItem[];
 
   constructor() {
+    this.items = [
+      {
+        label: 'T. Maestras',
+        items: [{
+          label: 'User',
+          routerLink: ['/userList'],
+          routerLinkActiveOptions: {exact: true},
+        },
+          {label: 'Quit'}
+        ],
+      }];
   }
 
   ngOnInit() {
