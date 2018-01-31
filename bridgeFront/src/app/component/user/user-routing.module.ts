@@ -4,7 +4,6 @@ import {NotfoundComponent} from '../not-found/notfound.component';
 import {UserComponent} from './user.component';
 import {UserListComponent} from './list/user-list/userList.component';
 
-
 const routes: Routes = [
   {
     path: 'userList',

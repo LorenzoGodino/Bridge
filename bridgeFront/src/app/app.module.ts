@@ -4,6 +4,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
+
 import {
   ButtonModule,
   FieldsetModule,
@@ -14,7 +15,8 @@ import {
   MessagesModule,
   PasswordModule
 } from 'primeng/primeng';
-import {MenuComponent} from './component/menu/menu.component';
+import {AppHeaderComponent} from './component/app-header/app-header.component';
+import {MenuComponent} from './component/app-header/menu/menu.component';
 import {AppComponent} from './component/main/app.component';
 import {LoginComponent} from './component/login/login.component';
 import {IAuthService} from './services/interfaces/iauth.services';
@@ -25,13 +27,16 @@ import {UserModule} from './component/user/user.module';
 import {HomeComponent} from './component/home/home.component';
 import {UserRoutingModule} from './component/user/user-routing.module';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     NotfoundComponent,
     HomeComponent,
-    MenuComponent
+    MenuComponent,
+    AppHeaderComponent
   ],
   imports: [FormsModule,
     ReactiveFormsModule, HttpClientModule, MenubarModule,

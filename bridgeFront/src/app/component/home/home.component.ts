@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {MenuItem} from "primeng/primeng";
+import {MenuItem} from 'primeng/primeng';
 
 @Component({
   selector: 'app-board',
@@ -15,8 +15,7 @@ export class HomeComponent implements OnInit {
         label: 'T. Maestras',
         items: [{
           label: 'User',
-          routerLink: ['/userList'],
-          routerLinkActiveOptions: {exact: true},
+          routerLink: ['/userList', { outlets: { bookPopup: [''] } }],
         },
           {label: 'Quit'}
         ],

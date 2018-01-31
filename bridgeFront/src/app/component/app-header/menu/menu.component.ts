@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {MenuItem} from 'primeng/primeng';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -10,14 +11,13 @@ import {MenuItem} from 'primeng/primeng';
 export class MenuComponent implements OnInit {
   items: MenuItem[];
 
-  constructor() {
+  constructor(private  activeRoute: ActivatedRoute) {
     this.items = [
       {
-        label: 'T. Maestras',
+        label: 'T. Maestra',
         items: [{
           label: 'User',
-          routerLink: ['/userList'],
-          routerLinkActiveOptions: {exact: true},
+          routerLink: ['/userList']
         },
           {label: 'Quit'}
         ],
