@@ -32,9 +32,21 @@ export class AuthService implements IAuthService {
     return body || {};
   }
 
+  /**
+   * Lista de Usuario
+   */
+  userList(): Observable<User[]> {
+     return this.http.get(this.baseurl + '/api/user/listUser')
+      .catch(this.handleError);
+  }
+  /**
+   * Devuelve si el Usuario esta logueado
+   * @param user
+   * @returns {Observable<User>}
+   */
   login(user): Observable<User> {
     return this.http.post(this.baseurl + '/api/user/login', user, {headers: this.headers})
     .catch(this.handleError);
-
   }
+
 }

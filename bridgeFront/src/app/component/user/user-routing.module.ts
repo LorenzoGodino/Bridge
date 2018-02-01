@@ -9,7 +9,7 @@ const routes: Routes = [
     path: 'userList',
     component: UserComponent,
     children: [
-      {path: '', component: UserListComponent ,    outlet : 'bookPopup', },
+      {path: '', component: UserListComponent ,    outlet : 'userRouter', },
     ]
   },
   {path: '**', component: NotfoundComponent}

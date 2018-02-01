@@ -1,4 +1,15 @@
+<p-table  [value]="lstuser">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>User</th>
+    </tr>
+    <tr>
+      <th>passsword</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-user>
 
-<p>
-  listuser works!
-</p>
+      <td>{{user.username}}</td>
+    <td>{{user.password}}</td>
+  </ng-template>
+</p-table>

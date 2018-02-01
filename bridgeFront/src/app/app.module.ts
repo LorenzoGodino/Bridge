@@ -4,7 +4,6 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgModule} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {HttpClientModule} from '@angular/common/http';
-
 import {
   ButtonModule,
   FieldsetModule,
@@ -13,7 +12,7 @@ import {
   MenubarModule,
   MessageModule,
   MessagesModule,
-  PasswordModule
+  PasswordModule,
 } from 'primeng/primeng';
 import {AppHeaderComponent} from './component/app-header/app-header.component';
 import {MenuComponent} from './component/app-header/menu/menu.component';
@@ -28,7 +27,6 @@ import {HomeComponent} from './component/home/home.component';
 import {UserRoutingModule} from './component/user/user-routing.module';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +39,7 @@ import {UserRoutingModule} from './component/user/user-routing.module';
   imports: [FormsModule,
     ReactiveFormsModule, HttpClientModule, MenubarModule,
     BrowserModule, BrowserAnimationsModule, InputTextModule,
-    AppRoutingModule, PasswordModule, ButtonModule
+     AppRoutingModule, PasswordModule, ButtonModule
     , GrowlModule, MessagesModule, MessageModule, FieldsetModule, UserModule, UserRoutingModule],
   providers: [AuthGuard, HttpClientModule, {provide: 'IAuthService', useClass: AuthService}],
   bootstrap: [AppComponent]

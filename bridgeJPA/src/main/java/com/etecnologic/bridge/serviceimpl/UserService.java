@@ -4,6 +4,7 @@ import com.etecnologic.bridge.dao.interfaz.UserRepository;
 import com.etecnologic.bridge.dao.interfaz.UserRepositoryCustom;
 import com.etecnologic.bridge.model.User;
 import com.etecnologic.bridge.service.interfaz.IUserService;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,6 +25,20 @@ public class UserService implements IUserService {
     }
 
 
+    @Override
+    /**
+     * Devuelve una Lista de Usuario
+     */
+    public List<User> findAll() {
+        return userRepository.findAll();
+    }
+
+    /**
+     * Devuelve si el Usuario es valido
+     * @param username
+     * @param password
+     * @return
+     */
     public User userValid(String username, String password) {
         return userRepository.findByUsernameAndPassword(username, password);
     }
