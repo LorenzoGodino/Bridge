@@ -17,7 +17,8 @@ export class MenuComponent implements OnInit {
         label: 'T. Maestra',
         items: [{
           label: 'User',
-          routerLink: ['/userList']
+          routerLink: ['/userList'],
+          target: 'i2'
         },
           {label: 'Quit'}
         ],
