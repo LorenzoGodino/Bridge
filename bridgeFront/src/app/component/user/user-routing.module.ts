@@ -9,10 +9,11 @@ const routes: Routes = [
     path: 'userList',
     component: UserComponent,
     children: [
-      {path: '', component: UserListComponent ,    outlet : 'userRouter', },
+      {path: '', component: UserListComponent, outlet: 'userRouter',},
     ]
   },
-  {path: '**', component: NotfoundComponent}
+  {path: '404',  component: NotfoundComponent},
+  {path: '**', redirectTo: '/404'}
 ];
 
 
